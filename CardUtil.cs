@@ -170,26 +170,5 @@ namespace ygopro
 			return false;
 		}
 		#endregion
-
-
-		#region 字符串化
-		/// <summary>
-		/// 密码字符串
-		/// </summary>
-		public static string GetIdString(Card card)
-		{
-			return card.Id.ToString("00000000");
-		}
-		/// <summary>
-		/// 字符串化
-		/// </summary>
-		public static string ToString(Card card)
-		{
-			return  card.Name+" ["+GetIdString(card)+"]";
-		}
-		public static string ToShortString(Card card){
-			return card.Name+" ["+GetIdString(card)+"]";
-		}
-		#endregion
 	}
 }

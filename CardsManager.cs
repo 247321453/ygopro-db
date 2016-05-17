@@ -40,7 +40,8 @@ namespace ygopro
 
 		public Card GetById(long id)
 		{
-			
+			Card card=new Card();
+			card.Id=0;
 			using(SQLiteCommand command = new SQLiteCommand("SELECT datas.id, ot, alias, "
 			                                                +"setcode, type, level, race, attribute, atk, def ,"
 			                                                +" name , desc, texts.* FROM datas,texts WHERE datas.id=texts.id",
@@ -48,7 +49,6 @@ namespace ygopro
 				using(SQLiteDataReader reader = command.ExecuteReader()){
 					if (reader.Read())
 					{
-						Card card=new Card();
 						card.Id = reader.GetInt64(0);
 						card.Ot = reader.GetInt32(1);
 						card.Alias=reader.GetInt64(2);
@@ -65,7 +65,7 @@ namespace ygopro
 					}
 				}
 			}
-			return null;
+			return card;
 		}
 	}
 }
