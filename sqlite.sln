@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.4
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlite", "sqlite.csproj", "{9144C331-CF09-4112-A66F-36E55BDE057E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{239C8EA1-94DF-40EC-A860-C316A8387D1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,9 @@ Global
 		{9144C331-CF09-4112-A66F-36E55BDE057E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9144C331-CF09-4112-A66F-36E55BDE057E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9144C331-CF09-4112-A66F-36E55BDE057E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239C8EA1-94DF-40EC-A860-C316A8387D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239C8EA1-94DF-40EC-A860-C316A8387D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239C8EA1-94DF-40EC-A860-C316A8387D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239C8EA1-94DF-40EC-A860-C316A8387D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
