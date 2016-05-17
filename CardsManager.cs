@@ -33,14 +33,14 @@ namespace ygopro
 		}
 		
 		public void Close(){
-			if(connectio!=null){
-				connectio.Close();
+			if(connection!=null){
+				connection.Close();
 			}
 		}
 
 		public Card GetById(long id)
 		{
-			Card card=null;
+			
 			using(SQLiteCommand command = new SQLiteCommand("SELECT datas.id, ot, alias, "
 			                                                +"setcode, type, level, race, attribute, atk, def ,"
 			                                                +" name , desc, texts.* FROM datas,texts WHERE datas.id=texts.id",
@@ -48,24 +48,24 @@ namespace ygopro
 				using(SQLiteDataReader reader = command.ExecuteReader()){
 					if (reader.Read())
 					{
-						card=new Card();
-						card.id = reader.GetInt64(0);
-						card.ot = reader.GetInt32(1);
-						card.alias=reader.GetInt64(2);
-						card.setcode = reader.GetInt64(3);
-						card.type = reader.GetInt64(4);
-						card.level = reader.GetInt64(5);
-						card.race = reader.GetInt32(6);
-						card.attribute = reader.GetInt32(7);
+						Card card=new Card();
+						card.Id = reader.GetInt64(0);
+						card.Ot = reader.GetInt32(1);
+						card.Alias=reader.GetInt64(2);
+						card.SetCode = reader.GetInt64(3);
+						card.Type = reader.GetInt64(4);
+						card.Level = reader.GetInt64(5);
+						card.Race = reader.GetInt32(6);
+						card.Attribute = reader.GetInt32(7);
 						card.Attack = reader.GetInt32(8);
 						card.Defense = reader.GetInt32(9);
-						card.name=reader.GetString(10);
-						card.desc=reader.GetString(11);
+						card.Name=reader.GetString(10);
+						card.Desc=reader.GetString(11);
+						return card;
 					}
-					reader.Close();
 				}
 			}
-			return card;
+			return null;
 		}
 	}
 }
